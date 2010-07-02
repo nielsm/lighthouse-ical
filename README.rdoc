@@ -1,6 +1,6 @@
 = lighthouse-ical
 
-Description goes here.
+No iCal feeds for milestones from Lighthouse are available.  What if you could roll your own?    
 
 == Note on Patches/Pull Requests
  
