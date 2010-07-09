@@ -5,12 +5,13 @@ begin
   require 'jeweler'
   Jeweler::Tasks.new do |gem|
     gem.name = "lighthouse-ical"
-    gem.summary = %Q{TODO: one-line summary of your gem}
-    gem.description = %Q{TODO: longer description of your gem}
-    gem.email = "nmeersschaert@mac.com"
+    gem.summary = %Q{Lighthouse generates iCal milestones}
+    gem.description = %Q{Generate iCal feeds from your Lighthouse Scheduled Milestones}
+    gem.email = "niels@meerwerks.com"
     gem.homepage = "http://github.com/nielsm/lighthouse-ical"
     gem.authors = ["Niels Meersschaert"]
     gem.add_development_dependency "rspec", ">= 1.2.9"
+    gem.add_dependency('icalendar', '>= 1.1.5')
     # gem is a Gem::Specification... see http://www.rubygems.org/read/chapter/20 for additional settings
   end
   Jeweler::GemcutterTasks.new

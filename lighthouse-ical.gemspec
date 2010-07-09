@@ -9,7 +9,7 @@ Gem::Specification.new do |s|
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Niels Meersschaert"]
-  s.date = %q{2010-07-02}
+  s.date = %q{2010-07-09}
   s.description = %q{Generate iCal feeds from your Lighthouse Scheduled Milestones}
   s.email = %q{niels@meerwerks.com}
   s.extra_rdoc_files = [
@@ -24,6 +24,7 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "lib/lighthouse-ical.rb",
+     "lighthouse-ical.gemspec",
      "spec/lighthouse-ical_spec.rb",
      "spec/spec.opts",
      "spec/spec_helper.rb"
@@ -44,11 +45,14 @@ Gem::Specification.new do |s|
 
     if Gem::Version.new(Gem::VERSION) >= Gem::Version.new('1.2.0') then
       s.add_development_dependency(%q<rspec>, [">= 1.2.9"])
+      s.add_runtime_dependency(%q<icalendar>, [">= 1.1.5"])
     else
       s.add_dependency(%q<rspec>, [">= 1.2.9"])
+      s.add_dependency(%q<icalendar>, [">= 1.1.5"])
     end
   else
     s.add_dependency(%q<rspec>, [">= 1.2.9"])
+    s.add_dependency(%q<icalendar>, [">= 1.1.5"])
   end
 end
 
