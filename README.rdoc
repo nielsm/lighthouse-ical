@@ -1,6 +1,23 @@
 = lighthouse-ical
 
-No iCal feeds for milestones from Lighthouse are available.  What if you could roll your own?    
+No iCal feeds for milestones from Lighthouse are available.  What if you could roll your own? 
+
+== Configuration
+The first thing you need to set is the account name.  This is the same
+as the web address for your account.
+  Lighthouse.account = 'meerwerks'
+
+Then, you should set the authentication.  You can either use your login
+credentials with HTTP Basic Authentication or with an API Tokens.  You can
+find more info on tokens at Lighthouse[http://lighthouseapp.com/help/using-beacons].
+
+=== With basic authentication
+   Lighthouse.authenticate('rick@techno-weenie.net', 'spacemonkey')
+
+=== or, use a token
+   Lighthouse.token = 'abcdefg'
+
+If no token or authentication info is given, you'll only be granted public access.
 
 == Note on Patches/Pull Requests
  
