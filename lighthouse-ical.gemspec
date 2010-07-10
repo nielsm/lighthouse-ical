@@ -5,11 +5,11 @@
 
 Gem::Specification.new do |s|
   s.name = %q{lighthouse-ical}
-  s.version = "0.0.0"
+  s.version = "0.0.1"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Niels Meersschaert"]
-  s.date = %q{2010-07-09}
+  s.date = %q{2010-07-10}
   s.description = %q{Generate iCal feeds from your Lighthouse Scheduled Milestones}
   s.email = %q{niels@meerwerks.com}
   s.extra_rdoc_files = [
