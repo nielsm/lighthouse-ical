@@ -23,6 +23,12 @@ class LighthouseIcal
     return calendar.to_ical
   end
   
+  def self.create_ics_file_for_project_id(filepath,project_id)
+    file = File.new(filepath,"w+")
+    file.write(self.create_calendar_for_project_id(project_id))
+    file.close
+  end
+  
   private 
   
   
