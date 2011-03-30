@@ -24,7 +24,7 @@ If no token or authentication info is given, you'll only be granted public acces
 
    LighthouseIcal.create_ics_file_for_project_id(filepath,project_id)    #Generates an ics file at the specified filepath for the Lighthouse project with project_id
 
-For an example webservice using the library, look at http://lighthouse-ical.craiga.id.au/[http://lighthouse-ical.craiga.id.au/].
+For an example webservice using the library, look at Lighthouse-ical-web[http://lighthouse-ical.craiga.id.au/].
 
 == Note on Patches/Pull Requests
  
