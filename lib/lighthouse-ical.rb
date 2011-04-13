@@ -22,19 +22,29 @@ class LighthouseIcal
     calendar.publish
     return calendar.to_ical
   end
-  
+
+  #Generates an ics file at the specified filepath of available milestones for the selected project
   def self.create_ics_file_for_project_id(filepath,project_id)
     file = File.new(filepath,"w+")
     file.write(self.create_calendar_for_project_id(project_id))
     file.close
   end
-  
+
   private 
-  
-  
+
+  #FIXME This is a hack to work around Lighthouse API only providing 30 milestones at a time.
+  #This is not performant & could result in N API calls where N is the number of pages of milestones
   def self.milestones_in_project(project_id)
     project = Lighthouse::Project.find(project_id)
-    return project.milestones
+    all_milestones = []
+    i = 1 
+    milestones = project.milestones(:page => i) 
+    while (milestones.any?) do 
+      i += 1 
+      all_milestones << milestones 
+      milestones = project.milestones(:page => i)
+    end
+    return all_milestones
   end
 
   def self.scheduled_milestones_in_project(project_id)
