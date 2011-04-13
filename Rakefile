@@ -17,6 +17,7 @@ Jeweler::Tasks.new do |gem|
   gem.email = "niels@meerwerks.com"
   gem.homepage = "http://github.com/nielsm/lighthouse-ical"
   gem.authors = ["Niels Meersschaert"]
+  gem.extra_rdoc_files = ["README.rdoc", "VERSION", "CHANGELOG.rdoc"]
 end
 Jeweler::RubygemsDotOrgTasks.new
 
